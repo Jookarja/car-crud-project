@@ -1,3 +1,4 @@
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QJsonDocument>
@@ -57,7 +58,7 @@ void MainWindow::handleReply(QNetworkReply *reply) {
             ui->tableWidget->setItem(i, 2, new QTableWidgetItem(obj["model"].toString()));
         }
     } else if (reply->operation() == QNetworkAccessManager::PostOperation) {
-        loadCars(); // päivitä taulukko lisäyksen jälkeen
+        loadCars();
     }
 
     reply->deleteLater();

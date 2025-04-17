@@ -1,10 +1,10 @@
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
-#include <QTableWidgetItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +25,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QNetworkAccessManager *manager;
-    QString apiUrl = "http://localhost/car-crud-project/rest-api/mysql_index.php?table=car";
+    const QString apiUrl = "http://localhost:8000/cars"; // Adjust if needed
 };
+
 #endif // MAINWINDOW_H
